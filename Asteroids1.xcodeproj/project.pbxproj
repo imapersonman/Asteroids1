@@ -8,23 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9273B23D1C7E4E8100729A2B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9273B23C1C7E4E8100729A2B /* main.cpp */; };
+		9273B2451C7E4E9D00729A2B /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9273B2431C7E4E9D00729A2B /* SDL2_ttf.framework */; };
+		9273B2461C7E4E9D00729A2B /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9273B2441C7E4E9D00729A2B /* SDL2.framework */; };
+		928533D41C7EBBC2007DFA8D /* alterebro-pixel-font.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 928533D31C7EBBC2007DFA8D /* alterebro-pixel-font.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9273B2371C7E4E8100729A2B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = Resources/Fonts;
+			dstSubfolderSpec = 7;
 			files = (
+				928533D41C7EBBC2007DFA8D /* alterebro-pixel-font.ttf in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9273B2391C7E4E8100729A2B /* Asteroids1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Asteroids1; sourceTree = BUILT_PRODUCTS_DIR; };
 		9273B23C1C7E4E8100729A2B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9273B2431C7E4E9D00729A2B /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = /Library/Frameworks/SDL2_ttf.framework; sourceTree = "<absolute>"; };
+		9273B2441C7E4E9D00729A2B /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+		928533D31C7EBBC2007DFA8D /* alterebro-pixel-font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alterebro-pixel-font.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9273B2451C7E4E9D00729A2B /* SDL2_ttf.framework in Frameworks */,
+				9273B2461C7E4E9D00729A2B /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,8 @@
 		9273B2301C7E4E8100729A2B = {
 			isa = PBXGroup;
 			children = (
+				928533D31C7EBBC2007DFA8D /* alterebro-pixel-font.ttf */,
+				9273B2471C7E4EA200729A2B /* Frameworks */,
 				9273B23B1C7E4E8100729A2B /* Asteroids1 */,
 				9273B23A1C7E4E8100729A2B /* Products */,
 			);
@@ -60,6 +71,15 @@
 				9273B23C1C7E4E8100729A2B /* main.cpp */,
 			);
 			path = Asteroids1;
+			sourceTree = "<group>";
+		};
+		9273B2471C7E4EA200729A2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9273B2431C7E4E9D00729A2B /* SDL2_ttf.framework */,
+				9273B2441C7E4E9D00729A2B /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +227,10 @@
 		9273B2411C7E4E8100729A2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +238,10 @@
 		9273B2421C7E4E8100729A2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +265,7 @@
 				9273B2421C7E4E8100729A2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
